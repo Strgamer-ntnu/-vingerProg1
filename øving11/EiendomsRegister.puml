@@ -1,0 +1,44 @@
+@startuml 
+
+class eiendom {
+    private final int Kommunenr
+    private final String kommunenavn
+    private final int Gardsnr
+    private final int Bruksnr
+    private final String bruksnavn
+    private float areal
+    private String eier
+
+    +eiendom(int Kommunenr, String kommunenavn, int Gardsnr, int Bruksnr, String bruksnavn, float areal, String eier)
+    +getKommunenr()
+    +getKommunenavn()
+    +getGardsnr()
+    +getBruksnr()
+    +getBruksnavn()
+    +getAreal()
+    +getEier()
+    +setEier(String eier)
+    +SetAreal(float areal)
+    +toString()
+    +toStringLong()
+
+}
+
+class eiendomsRegister {
+    private HashMap<String, eiendom> eiendommerMap
+
+
+    public void leggTilEiendom(eiendom eiendom)
+    public ArrayList<eiendom> getEiendommer()
+    public eiendom sokEtterEiendom(int Kommunenr, int Gardsnr, int Bruksnr)
+    public float beregnSnittAreal()
+
+}
+class Applikasjon {
+    main()
+}
+
+Applikasjon --o eiendomsRegister
+eiendomsRegister --o eiendom
+@enduml
+

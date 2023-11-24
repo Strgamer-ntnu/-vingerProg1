@@ -1,0 +1,54 @@
+@startuml Øving4
+class rett{
+    private String navn
+    private String oppskrift
+    private int pris
+    private typeRetter type{forrett, hovedrett, dessert}
+    rett(String navn, String oppskrift, int pris, enum type)
+    getNavn()
+    getOppskrift()
+    getPris()
+    getRettIsType(typeRetter type)
+    toString()
+
+}
+class meny{
+    private String navn
+    private rett[] retter
+    private int totalPris
+    meny(String navn, rett[] retter)
+    getNavn()
+    getRetter()
+    getTotalPris()
+    getTotalPrisIIntervall(int startverdi, int sluttverdi)
+    toString()
+
+    }
+class menyRegister{
+    private ArrayList<meny> menyListe
+    private ArrayList<rett> forrettListe
+    private ArrayList<rett> hovedrettListe
+    private ArrayList<rett> dessertListe
+    registrerNyRett(rett nyRett)
+    finnRettMedNavn(String navn)
+    finnRetterMedType(typeRetter type)
+    registrerNyMeny(meny nyMeny)
+    finnMenyMedPrisIIntervallet(int startverdi, int sluttverdi)
+
+    }
+class KlientProgram{
+    main()
+    }
+
+
+
+meny--o rett
+menyRegister--o meny
+menyRegister--o rett
+KlientProgram-->menyRegister
+        
+@enduml
+                
+              
+
+

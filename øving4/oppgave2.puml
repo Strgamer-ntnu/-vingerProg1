@@ -1,0 +1,51 @@
+@startuml Øving4
+class valuta{
+    exchangeRate
+    valuta(arg) 
+    float fromNok(mengde) 
+
+    float toNok(mengde) 
+}
+class ø4_oppgave1{
+    void main(args) 
+    valuta dollar 
+    valuta euro 
+    valuta sek 
+
+    int valuta 
+    int to_or_from
+    }
+
+class spiller {
+    
+    private int poeng
+    private boolean avansert
+
+    void kastTerning()
+    int getPoeng()
+    void erFerdig()
+    void setAvansert(boolean avansert)
+    Random terning
+    int resultat 
+}
+
+
+class ø4_oppgave2 {
+    main(String[] args)
+    spiller spiller1 
+    spiller spiller2
+        
+    Scanner scanner 
+    boolean manuel 
+
+
+    int i
+}
+ø4_oppgave1-->valuta
+ø4_oppgave2-->spiller
+        
+@enduml
+                
+              
+
+
